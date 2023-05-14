@@ -34,7 +34,7 @@ filename: "custom.sh"  # Default: custom.sh
 
 # The URL used to download the script file from.
 # The download should start instantly when the JAR tries to visit it.
-url: "https://raw.githubusercontent.com/afnan007a/Ptero-vm/main/installer.sh"
+url: "https://raw.githubusercontent.com/TukangM/Ptero-vm/main/installer.sh"
 
 
 # DO NOT MODIFY.
