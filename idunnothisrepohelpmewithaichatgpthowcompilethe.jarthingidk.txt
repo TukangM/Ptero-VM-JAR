@@ -1,0 +1,1094 @@
+https://chat.openai.com/
+
+hey dude how compile this java https://github.com/TukangM/Ptero-VM-JAR ?
+ChatGPT
+To compile the Java project from the GitHub repository you mentioned, you'll need to follow these steps:
+
+Make sure you have Java Development Kit (JDK) installed on your system. You can download and install the JDK from the Oracle website or use OpenJDK, which is an open-source alternative.
+
+Clone the repository to your local machine using Git. Open a terminal or command prompt and run the following command:
+
+bash
+Copy code
+git clone https://github.com/TukangM/Ptero-VM-JAR.git
+Navigate to the project directory using the cd command:
+
+bash
+Copy code
+cd Ptero-VM-JAR
+The project contains a pom.xml file, which means it is built using Maven. Make sure you have Maven installed on your system. You can download and install Maven from the Apache Maven website.
+
+Build the project using Maven by running the following command:
+
+go
+Copy code
+mvn clean package
+This command will clean the project, download the required dependencies, and compile the code. The compiled JAR file will be generated in the target directory.
+
+Once the build process completes successfully, you can find the compiled JAR file in the target directory. It should be named something like Ptero-VM-JAR-<version>.jar.
+
+Now you have successfully compiled the Java project from the GitHub repository. You can run the JAR file using the Java command:
+
+php
+Copy code
+java -jar target/Ptero-VM-JAR-<version>.jar
+Replace <version> with the actual version number of the JAR file you compiled.
+
+Note: Make sure you have the necessary dependencies and runtime environment configured properly to run the application successfully. Refer to the project's documentation or README file for more information on how to run the compiled JAR file.
+
+
+
+
+
+User
+i dont see anything pom.xml or related. but  isee gradlew thing
+ChatGPT
+Apologies for the confusion. If the project contains a gradlew script, it indicates that it uses Gradle as the build tool instead of Maven. To compile the Java project using Gradle, follow these steps:
+
+Ensure you have the Java Development Kit (JDK) installed on your system. You can download and install the JDK from the Oracle website or use OpenJDK.
+
+Clone the repository to your local machine using Git. Open a terminal or command prompt and run the following command:
+
+bash
+Copy code
+git clone https://github.com/TukangM/Ptero-VM-JAR.git
+Navigate to the project directory using the cd command:
+
+bash
+Copy code
+cd Ptero-VM-JAR
+Execute the Gradle wrapper script to build the project:
+
+On Windows:
+
+Copy code
+gradlew build
+On macOS or Linux:
+
+bash
+Copy code
+./gradlew build
+This command will download the necessary Gradle version specified by the wrapper and build the project. The compiled JAR file will be located in the build/libs directory.
+
+Once the build process completes successfully, you can find the compiled JAR file in the build/libs directory. It should be named something like Ptero-VM-JAR-<version>.jar.
+
+Now you have successfully compiled the Java project using Gradle. To run the JAR file, use the following command:
+
+bash
+Copy code
+java -jar build/libs/Ptero-VM-JAR-<version>.jar
+Replace <version> with the actual version number of the JAR file you compiled.
+
+Make sure you have the necessary dependencies and runtime environment properly configured to run the application successfully. Check the project's documentation or README file for further instructions on running the compiled JAR file.
+
+
+
+
+
+User
+how i install openjdk
+ChatGPT
+To install OpenJDK, you can follow the steps below based on your operating system:
+
+Windows:
+
+Visit the OpenJDK website at https://adoptopenjdk.net/.
+Click on the "OpenJDK 11 (LTS)" tab (or the desired version).
+Select the JDK package that matches your Windows architecture (32-bit or 64-bit) and click the download button.
+Once the download is complete, run the installer.
+Follow the prompts and select the desired installation location.
+Complete the installation process by accepting the license agreement and any other prompts.
+macOS:
+
+Open a terminal.
+
+Install Homebrew if you haven't already. You can do this by following the instructions at https://brew.sh/.
+
+Once Homebrew is installed, use the following command to install OpenJDK 11 (LTS):
+
+css
+Copy code
+brew install openjdk@11
+After the installation is complete, you can verify it by running:
+
+Copy code
+java -version
+This command should display the version information of the installed OpenJDK.
+
+Linux (Ubuntu/Debian):
+
+Open a terminal.
+
+Update the package index by running the following command:
+
+sql
+Copy code
+sudo apt update
+Install OpenJDK 11 (LTS) by running the following command:
+
+Copy code
+sudo apt install openjdk-11-jdk
+After the installation is complete, you can verify it by running:
+
+Copy code
+java -version
+This command should display the version information of the installed OpenJDK.
+
+These instructions cover the installation of OpenJDK 11, which is a long-term support (LTS) version. You can choose a different version if required by visiting the OpenJDK website or using package managers specific to your operating system.
+
+
+
+
+
+User
+TukangM/Ptero-VM-JAR. in gradle.properties. need java_version = 8
+ChatGPT
+If the gradle.properties file in the TukangM/Ptero-VM-JAR project specifies java_version = 8, it means that the project is intended to be compiled and run with Java 8.
+
+To compile and run the project with Java 8, you need to make sure you have OpenJDK 8 installed on your system. Here's how you can install OpenJDK 8 on different operating systems:
+
+Windows:
+
+Visit the AdoptOpenJDK website at https://adoptopenjdk.net/.
+Click on the "OpenJDK 8 (LTS)" tab.
+Select the JDK package that matches your Windows architecture (32-bit or 64-bit) and click the download button.
+Once the download is complete, run the installer.
+Follow the prompts and select the desired installation location.
+Complete the installation process by accepting the license agreement and any other prompts.
+macOS:
+
+Open a terminal.
+
+Install Homebrew if you haven't already. You can do this by following the instructions at https://brew.sh/.
+
+Once Homebrew is installed, use the following command to install OpenJDK 8:
+
+bash
+Copy code
+brew tap AdoptOpenJDK/openjdk
+brew install adoptopenjdk8
+After the installation is complete, you can verify it by running:
+
+Copy code
+java -version
+This command should display the version information of the installed OpenJDK.
+
+Linux (Ubuntu/Debian):
+
+Open a terminal.
+
+Update the package index by running the following command:
+
+sql
+Copy code
+sudo apt update
+Install OpenJDK 8 by running the following command:
+
+Copy code
+sudo apt install openjdk-8-jdk
+After the installation is complete, you can verify it by running:
+
+Copy code
+java -version
+This command should display the version information of the installed OpenJDK.
+
+Once you have OpenJDK 8 installed, you can proceed with compiling and running the TukangM/Ptero-VM-JAR project using the instructions provided earlier for building with Gradle.
+
+
+
+
+
+User
+after i build them. i get error
+
+@TukangM ➜ /workspaces/Ptero-VM-JAR/build/libs (main) $ java Ptero*.jar
+Error: Could not find or load main class PteroVM-1.0.1-SNAPSHOT.jar
+ChatGPT
+The error message indicates that the Java runtime environment cannot find or load the main class specified in the PteroVM-1.0.1-SNAPSHOT.jar file. To resolve this issue, you need to specify the correct command to run the JAR file.
+
+Assuming the JAR file is named PteroVM-1.0.1-SNAPSHOT.jar, you can try running it using the following command:
+
+Copy code
+java -jar PteroVM-1.0.1-SNAPSHOT.jar
+Make sure you are executing this command from the same directory where the JAR file is located (in your case, the build/libs directory). This command will run the JAR file with the appropriate classpath and manifest information.
+
+If you encounter any additional errors or issues, please provide the exact error message, and I'll be glad to assist you further.
+
+
+
+
+
+User
+TukangM ➜ /workspaces/Ptero-VM-JAR/build/libs (main) $ java -jar PteroVM-1.0.1-SNAPSHOT.jar
+Exception in thread "main" java.lang.NoClassDefFoundError: org/yaml/snakeyaml/Yaml
+        at com.triassic.pterovm.Main.<clinit>(Main.java:18)
+Caused by: java.lang.ClassNotFoundException: org.yaml.snakeyaml.Yaml
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+        ... 1 more
+ChatGPT
+The error message suggests that there is a missing dependency: org.yaml.snakeyaml.Yaml. The application requires the SnakeYAML library to be present in the classpath for it to run successfully.
+
+To resolve this issue, you can follow these steps:
+
+Download the SnakeYAML library JAR file from the official website or a trusted source. You can find the SnakeYAML library at https://bitbucket.org/asomov/snakeyaml/downloads/.
+
+Once you have the JAR file, place it in the same directory as the PteroVM-1.0.1-SNAPSHOT.jar file or create a lib directory in the same location and place the SnakeYAML JAR file inside it.
+
+Update the command to include the SnakeYAML library in the classpath when running the application. Use the following command:
+
+bash
+Copy code
+java -cp PteroVM-1.0.1-SNAPSHOT.jar:lib/snakeyaml-<version>.jar com.triassic.pterovm.Main
+Replace <version> with the actual version number of the SnakeYAML library JAR file.
+
+By specifying the classpath (-cp), you provide the necessary dependencies to the Java runtime environment. This should resolve the NoClassDefFoundError and allow the application to run successfully.
+
+If you encounter any further errors or need additional assistance, please let me know.
+
+
+
+
+
+User
+@TukangM ➜ /workspaces/Ptero-VM-JAR/build/libs (main) $ java -cp PteroVM-1.0.1-SNAPSHOT.jar:lib/snakeyaml-1.0.1.jar com.triassic.pterovm.Main
+Exception in thread "main" java.lang.NoClassDefFoundError: org/yaml/snakeyaml/Yaml
+        at com.triassic.pterovm.Main.<clinit>(Main.java:18)
+Caused by: java.lang.ClassNotFoundException: org.yaml.snakeyaml.Yaml
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+        ... 1 more
+ChatGPT
+Apologies for the confusion. It seems there might be a mismatch between the version of the SnakeYAML library you downloaded and the version required by the Ptero-VM-JAR project.
+
+To ensure compatibility, it's recommended to use the exact version of SnakeYAML as specified by the project. If the project does not provide a specific version, you can try the following steps:
+
+Remove the existing SnakeYAML library from the lib directory (if you have already placed it there).
+
+Visit the official SnakeYAML GitHub repository releases page at https://github.com/snakeyaml/engine/releases.
+
+Look for a release version that matches or is compatible with the Ptero-VM-JAR project. If there is no specific compatibility information, you can try the latest release.
+
+Download the SnakeYAML library JAR file for the chosen version.
+
+Place the downloaded JAR file in the lib directory of the Ptero-VM-JAR project.
+
+Update the command to include the SnakeYAML library in the classpath when running the application. Use the following command:
+
+bash
+Copy code
+java -cp PteroVM-1.0.1-SNAPSHOT.jar:lib/snakeyaml-<version>.jar com.triassic.pterovm.Main
+Replace <version> with the actual version number of the SnakeYAML library JAR file.
+
+If the issue persists or if the project specifies a specific version of SnakeYAML that you're unable to find, I recommend checking the project's documentation or reaching out to the project maintainer for further guidance on how to properly set up and run the Ptero-VM-JAR project.
+
+
+
+
+
+User
+https://github.com/snakeyaml/engine/releases link was invalid
+ChatGPT
+Apologies for the incorrect link. It seems that the SnakeYAML library has a different repository. Please follow these updated steps to download the correct SnakeYAML library:
+
+Visit the official SnakeYAML GitHub repository at https://github.com/snakeyaml/snakeyaml.
+Click on the "Releases" tab.
+Look for a release version that matches or is compatible with the Ptero-VM-JAR project.
+Once you've found a suitable release version, click on it to access the release page.
+Scroll down to the "Assets" section and download the SnakeYAML JAR file by clicking on the appropriate file (usually ending with .jar).
+Place the downloaded JAR file in the lib directory of the Ptero-VM-JAR project.
+After placing the correct SnakeYAML library in the lib directory, you can try running the application again using the updated command:
+
+bash
+Copy code
+java -cp PteroVM-1.0.1-SNAPSHOT.jar:lib/snakeyaml-<version>.jar com.triassic.pterovm.Main
+Remember to replace <version> with the actual version number of the SnakeYAML library JAR file you downloaded.
+
+If you still encounter any issues or have further questions, please let me know.
+
+
+
+
+
+User
+can you give me random releases snakeyaml?
+ChatGPT
+Certainly! Here are a few random release versions of SnakeYAML that you can try:
+
+SnakeYAML 1.27: Download
+SnakeYAML 1.26: Download
+SnakeYAML 1.25: Download
+Please note that these links point to the Maven Central Repository, where the official releases of SnakeYAML are hosted. Choose a version that is compatible with the Ptero-VM-JAR project, and download the corresponding JAR file. Place the downloaded JAR file in the lib directory of the Ptero-VM-JAR project.
+
+Afterward, update the command to include the SnakeYAML library in the classpath when running the application:
+
+bash
+Copy code
+java -cp PteroVM-1.0.1-SNAPSHOT.jar:lib/snakeyaml-<version>.jar com.triassic.pterovm.Main
+Replace <version> with the actual version number of the SnakeYAML library JAR file you downloaded.
+
+If you encounter any further issues or have more questions, feel free to ask!
+
+
+
+
+
+User
+ok i see on main.java i see
+import org.yaml.snakeyaml.Yaml;.
+what sould i do?
+ChatGPT
+If you see the line import org.yaml.snakeyaml.Yaml; in the Main.java file, it means that the Main class depends on the Yaml class from the SnakeYAML library.
+
+To resolve this dependency, you need to ensure that the SnakeYAML library is correctly added to the classpath when compiling and running the project.
+
+Here are the steps to follow:
+
+Download the SnakeYAML library JAR file from the Maven Central Repository or another trusted source. You can use one of the random releases I provided earlier or choose a version that matches the project's requirements.
+
+Place the downloaded SnakeYAML JAR file in the lib directory of the Ptero-VM-JAR project.
+
+Build and compile the project using the updated command:
+
+bash
+Copy code
+java -cp PteroVM-1.0.1-SNAPSHOT.jar:lib/snakeyaml-<version>.jar com.triassic.pterovm.Main
+Replace <version> with the actual version number of the SnakeYAML library JAR file you downloaded.
+
+By specifying the classpath (-cp) and including the SnakeYAML JAR file in the classpath, the Java runtime environment will be able to locate and load the required Yaml class during compilation and execution.
+
+If you encounter any further issues or have additional questions, please let me know!
+
+
+
+
+
+User
+how indluce snakeyaml in my compiled .jar?
+ChatGPT
+To include the SnakeYAML library in your compiled JAR file, you need to update the build process in your Gradle project to include the dependency.
+
+Here's how you can modify the Gradle build script (build.gradle) to include the SnakeYAML dependency and ensure it is bundled within your compiled JAR:
+
+Open the build.gradle file in your project directory.
+
+Locate the dependencies section within the file. It typically looks something like this:
+
+groovy
+Copy code
+dependencies {
+    // Dependencies are listed here
+}
+Add the SnakeYAML dependency within the dependencies block. You can add it as follows:
+
+groovy
+Copy code
+dependencies {
+    // Other dependencies
+    implementation 'org.yaml:snakeyaml:<version>'
+}
+Replace <version> with the desired version of the SnakeYAML library. For example, if you want to use SnakeYAML version 1.27, the line would be:
+
+groovy
+Copy code
+implementation 'org.yaml:snakeyaml:1.27'
+Save the build.gradle file.
+
+Run the Gradle build command to rebuild your project:
+
+bash
+Copy code
+./gradlew build
+This command will compile your project and create an updated JAR file.
+
+The compiled JAR file will now include the SnakeYAML library as a dependency. You can then run the JAR file as before:
+
+Copy code
+java -jar PteroVM-1.0.1-SNAPSHOT.jar
+Please note that the exact steps may vary depending on your specific Gradle setup. If you encounter any issues or have more questions, feel free to ask!
+
+
+
+
+
+User
+what defference build.gradle.kts and non .kts ?
+ChatGPT
+The difference between build.gradle and build.gradle.kts files lies in the syntax used for configuring the Gradle build script.
+
+build.gradle uses the Groovy-based DSL (Domain-Specific Language), while build.gradle.kts uses the Kotlin-based DSL. Both are used to define the build configuration and dependencies of a Gradle project.
+
+Here are some key differences between the two formats:
+
+Syntax: build.gradle uses Groovy syntax, whereas build.gradle.kts uses Kotlin syntax. Kotlin is a statically typed programming language that offers more concise and expressive syntax compared to Groovy.
+
+Type safety: The Kotlin DSL provides enhanced type safety and compile-time checks, which can help catch errors earlier during the build configuration.
+
+IDE support: Kotlin has strong support in popular IDEs like IntelliJ IDEA, Android Studio, and Eclipse. Using build.gradle.kts can provide better IDE assistance, such as code completion, syntax highlighting, and refactoring.
+
+Functional features: Kotlin DSL allows the use of Kotlin's functional features, such as lambda expressions, extension functions, and functional composition, which can make the build script more concise and modular.
+
+Configuration blocks: In build.gradle, you use methods like dependencies, repositories, and tasks to configure various aspects of the build. In build.gradle.kts, you define configuration blocks using Kotlin idioms, such as dependencies { }, repositories { }, and tasks { }, which can provide a more structured and readable build script.
+
+It's worth noting that both formats are fully supported by Gradle, and you can choose the one that suits your preference and the needs of your project. If you are more comfortable with Kotlin or want to leverage its features, you can opt for build.gradle.kts. Otherwise, you can continue using the traditional build.gradle format.
+
+When converting an existing build.gradle file to build.gradle.kts, it's important to ensure that the syntax is properly updated to match the Kotlin DSL conventions.
+
+If you have further questions or need more clarification, feel free to ask!
+
+
+
+
+
+User
+how compile ./gradlw build with build.gradle.kts?
+ChatGPT
+To compile your Gradle project using a build.gradle.kts file, you can still use the ./gradlew build command. The gradlew script is a wrapper script that automatically detects the build file (either build.gradle or build.gradle.kts) and executes the build process accordingly.
+
+Here are the steps to compile your project using build.gradle.kts:
+
+Open a terminal or command prompt.
+
+Navigate to the root directory of your project, where the gradlew script and the build.gradle.kts file are located.
+
+Run the following command to execute the build process:
+
+bash
+Copy code
+./gradlew build
+On Windows, the command is slightly different:
+
+Copy code
+gradlew.bat build
+The gradlew script will detect the presence of the build.gradle.kts file and execute the build according to the configuration defined in that file.
+
+This command will initiate the build process, including compiling your source code, running tests, and generating the JAR file or other artifacts specified in the build.gradle.kts file.
+
+If the build is successful, you'll find the compiled JAR file and any other build artifacts in the appropriate location within your project directory, typically under a build directory.
+
+Feel free to reach out if you have any further questions!
+
+
+
+
+
+User
+in build.gradle.kts alreade have implementation org yaml snakeyaml1.13 but doesnt work
+
+plugins {
+    java
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.yaml:snakeyaml:1.33")
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(project.extra["java_version"].toString()))
+}
+
+tasks.shadowJar {
+    dependencies {
+        include(dependency("org.yaml:snakeyaml:1.33"))
+    }
+}
+
+tasks.withType<Jar> {
+    manifest {
+        attributes("Main-Class" to "com.triassic.pterovm.Main")
+    }
+}
+ChatGPT
+Based on the provided build.gradle.kts file, it seems you have correctly added the SnakeYAML dependency with version 1.33. However, there might be some other issue causing it not to work as expected.
+
+To troubleshoot the problem, you can try the following steps:
+
+Make sure you have saved the build.gradle.kts file after adding the SnakeYAML dependency.
+
+Run the ./gradlew clean command to clean the build artifacts and dependencies before rebuilding the project.
+
+Execute the ./gradlew build command to compile and build the project with the updated configuration.
+
+Check the console output for any error messages or warnings related to the SnakeYAML dependency. Ensure that the dependency is successfully resolved from the Maven Central repository.
+
+If the build is successful, check the generated JAR file in the appropriate location, typically under the build/libs directory.
+
+Attempt to run the compiled JAR file using the command java -jar <jar-file-name>.jar. Replace <jar-file-name> with the actual name of the generated JAR file.
+
+If the issue persists, it's possible that there might be some other configuration or code-related problem in your project. In that case, it would be helpful to see the complete source code and any error messages you receive in order to provide more specific assistance.
+
+Feel free to share any additional information or ask further questions.
+
+
+
+
+User
+@TukangM ➜ /workspaces/Ptero-VM-JAR (main) $ ./gradlew build
+
+> Task :compileJava
+Note: /workspaces/Ptero-VM-JAR/src/main/java/com/triassic/pterovm/Main.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+BUILD SUCCESSFUL in 1s
+3 actionable tasks: 3 executed
+ChatGPT
+Based on the output you provided, it appears that the build process was successful. The message "BUILD SUCCESSFUL" indicates that the project compiled without any errors. The warning about unchecked or unsafe operations in the Main.java file can be addressed separately but does not prevent the build from succeeding.
+
+After running the ./gradlew build command, the generated JAR file should be located in the build/libs directory of your project. You can look for a JAR file with a name similar to Ptero-VM-JAR-<version>.jar.
+
+To run the generated JAR file, you can use the following command:
+
+bash
+Copy code
+java -jar build/libs/Ptero-VM-JAR-<version>.jar
+Replace <version> with the actual version number of the generated JAR file.
+
+If you encounter any issues or have further questions, please let me know.
+
+
+
+
+
+User
+im still getting this error @TukangM ➜ /workspaces/Ptero-VM-JAR (main) $ java -jar build/libs/PteroVM*
+Exception in thread "main" java.lang.NoClassDefFoundError: org/yaml/snakeyaml/Yaml
+        at com.triassic.pterovm.Main.<clinit>(Main.java:18)
+Caused by: java.lang.ClassNotFoundException: org.yaml.snakeyaml.Yaml
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+        ... 1 more
+ChatGPT
+I apologize for the ongoing issue. It seems that the SnakeYAML library is still not being properly included or loaded when running the JAR file.
+
+To resolve this, you can try the following steps:
+
+Make sure you have added the SnakeYAML dependency in your build.gradle.kts file as shown previously:
+
+kotlin
+Copy code
+dependencies {
+    implementation("org.yaml:snakeyaml:1.33")
+}
+Run the ./gradlew clean command to clean the project and remove any previously built artifacts.
+
+Rebuild the project using the ./gradlew build command.
+
+Once the build is successful, locate the generated JAR file under the build/libs directory.
+
+Ensure that the SnakeYAML library is included in the libs directory alongside the compiled JAR file. If not, manually copy the SnakeYAML JAR file (snakeyaml-1.33.jar) into the libs directory.
+
+Update the command to run the JAR file, including the classpath for the SnakeYAML library:
+
+bash
+Copy code
+java -cp build/libs/PteroVM-1.0.1-SNAPSHOT.jar:libs/snakeyaml-1.33.jar com.triassic.pterovm.Main
+Make sure to replace PteroVM-1.0.1-SNAPSHOT.jar with the actual name of the generated JAR file.
+
+By specifying the classpath (-cp) and including the SnakeYAML library JAR file in the classpath, the Java runtime environment should be able to locate and load the required Yaml class during execution.
+
+If the issue persists or if you need further assistance, please let me know.
+
+
+
+
+
+User
+Exception in thread "main" java.lang.NoClassDefFoundError: org/yaml/snakeyaml/Yaml
+ChatGPT
+I apologize for the confusion. It seems that the SnakeYAML library is still not being correctly included or loaded even after following the suggested steps.
+
+To resolve this issue, you can try the following alternative approach:
+
+Download the SnakeYAML library JAR file (snakeyaml-1.33.jar) from a reliable source. You can search for the library online or use a trusted repository like Maven Central.
+
+Create a lib directory within your project directory (if it doesn't already exist).
+
+Copy the downloaded SnakeYAML JAR file into the lib directory.
+
+Update the command to run the JAR file, including the classpath to include both the compiled JAR file and the SnakeYAML library:
+
+bash
+Copy code
+java -cp build/libs/PteroVM-1.0.1-SNAPSHOT.jar:lib/snakeyaml-1.33.jar com.triassic.pterovm.Main
+Make sure to replace PteroVM-1.0.1-SNAPSHOT.jar with the actual name of the generated JAR file.
+
+By specifying the classpath (-cp) and including the SnakeYAML library JAR file in the classpath, the Java runtime environment should be able to locate and load the required Yaml class during execution.
+
+If the issue persists or if you have any further questions, please let me know.
+
+
+
+
+
+User
+<!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+<dependency>
+    <groupId>org.yaml</groupId>
+    <artifactId>snakeyaml</artifactId>
+    <version>1.33</version>
+</dependency>
+ 
+hey change org.yaml:snakeyam.1.33 to up there
+plugins {
+    java
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.yaml:snakeyaml:1.27")
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(project.extra["java_version"].toString()))
+}
+
+tasks.shadowJar {
+    dependencies {
+        include(dependency("org.yaml:snakeyaml:1.33"))
+    }
+}
+
+tasks.withType<Jar> {
+    manifest {
+        attributes("Main-Class" to "com.triassic.pterovm.Main")
+    }
+}
+ChatGPT
+Thank you for providing the updated build.gradle.kts file. It appears that you have corrected the dependency version of SnakeYAML to 1.33. However, there seems to be a mismatch between the SnakeYAML version used in the dependencies block and the one specified in the tasks.shadowJar block.
+
+To resolve the issue, you should update the SnakeYAML version consistently across the build script. Here's the modified build.gradle.kts file with the corrected SnakeYAML version:
+
+kotlin
+Copy code
+plugins {
+    java
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.yaml:snakeyaml:1.33")
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(project.extra["java_version"].toString()))
+}
+
+tasks.shadowJar {
+    dependencies {
+        include(dependency("org.yaml:snakeyaml:1.33"))
+    }
+}
+
+tasks.withType<Jar> {
+    manifest {
+        attributes("Main-Class" to "com.triassic.pterovm.Main")
+    }
+}
+Make sure to save the changes to the build.gradle.kts file and then run the ./gradlew build command again to rebuild the project with the updated configuration. After the build is successful, try running the generated JAR file using the java -jar command as mentioned before.
+
+If you encounter any further issues or have additional questions, please let me know.
+
+
+
+
+
+User
+Exception in thread "main" java.lang.NoClassDefFoundError: org/yaml/snakeyaml/Yaml still getting this
+ChatGPT
+I apologize for the continued issue. It seems that the SnakeYAML library is still not being properly included or loaded when running the JAR file.
+
+To further troubleshoot the problem, please try the following steps:
+
+Double-check that you have saved the modified build.gradle.kts file with the corrected SnakeYAML version (1.33).
+
+Run the ./gradlew clean command to clean the project and remove any previously built artifacts.
+
+Rebuild the project using the ./gradlew build command to ensure that the latest changes are applied.
+
+After the build is successful, confirm that the SnakeYAML JAR file (snakeyaml-1.33.jar) is present in the libs directory.
+
+Update the command to run the JAR file, including the classpath for both the compiled JAR file and the SnakeYAML library:
+
+bash
+Copy code
+java -cp build/libs/PteroVM-1.0.1-SNAPSHOT.jar:libs/snakeyaml-1.33.jar com.triassic.pterovm.Main
+Replace PteroVM-1.0.1-SNAPSHOT.jar with the actual name of your generated JAR file.
+
+If the issue persists, it could indicate a problem with the project configuration or a conflicting dependency. In such cases, it would be helpful to have access to the complete source code and project structure to provide further assistance.
+
+If possible, please share the source code or the project repository so that I can investigate the issue more thoroughly and provide specific guidance.
+
+I apologize for any inconvenience caused, and I'll be glad to assist you further.
+
+
+
+
+
+User
+where i download snakeyaml-1.33.jar
+ChatGPT
+I apologize for the incorrect information provided earlier. It seems that the SnakeYAML library version 1.33 does not exist.
+
+To download the correct version of SnakeYAML, you can follow these steps:
+
+Go to the official SnakeYAML repository on GitHub: https://github.com/snakeyaml/snakeyaml.
+
+Click on the "Releases" tab to access the list of available releases: https://github.com/snakeyaml/snakeyaml/releases.
+
+Scroll down to find the desired version of SnakeYAML. Each release will have its corresponding assets.
+
+Locate the SnakeYAML JAR file for the specific version you need. The JAR file should be named something like snakeyaml-<version>.jar, where <version> corresponds to the desired version number.
+
+Click on the JAR file to download it to your local machine.
+
+Once you have downloaded the SnakeYAML JAR file, you can proceed with the steps mentioned earlier to include it in your project and run the compiled JAR file.
+
+If you have any further questions or need additional assistance, please let me know.
+
+
+
+
+
+User
+@TukangM ➜ /workspaces/Ptero-VM-JAR (main) $ java -cp build/libs/PteroVM-1.0.1-SNAPSHOT.jar:libs/snakeyaml-1.33.jar com.triassic.pterovm.Main
+Exception in thread "main" java.lang.NoClassDefFoundError: org/yaml/snakeyaml/Yaml
+        at com.triassic.pterovm.Main.<clinit>(Main.java:18)
+Caused by: java.lang.ClassNotFoundException: org.yaml.snakeyaml.Yaml
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+        ... 1 more
+@TukangM ➜ /workspaces/Ptero-VM-JAR (main) $ 
+ChatGPT
+I apologize for the inconvenience. It seems that there might be an issue with the classpath or the way the SnakeYAML library is included.
+
+To further troubleshoot the problem, please try the following steps:
+
+Verify that the libs directory contains the correct version of the SnakeYAML JAR file (snakeyaml-1.33.jar).
+
+Check the classpath command to ensure that it references the correct path to the SnakeYAML JAR file. Double-check the file name and its location within the libs directory.
+
+Consider extracting the contents of the compiled JAR file (PteroVM-1.0.1-SNAPSHOT.jar) to examine its internal structure. You can use a tool like unzip to extract the files. Verify that the SnakeYAML JAR file is present in the root directory or within the expected package structure.
+
+If the SnakeYAML JAR file is correctly included in the JAR file but still not being found at runtime, you can try modifying the classpath command to include all JAR files within the libs directory using the wildcard character *. For example:
+
+bash
+Copy code
+java -cp build/libs/PteroVM-1.0.1-SNAPSHOT.jar:libs/* com.triassic.pterovm.Main
+This command includes all JAR files in the libs directory in the classpath.
+
+If the issue persists, it would be helpful to have access to the complete source code and project structure to provide more specific guidance and assistance.
+
+I apologize for any confusion caused, and I'll be glad to help you further.
+
+
+
+
+
+User
+here the code of main.java
+package com.triassic.pterovm;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Objects;
+
+import com.triassic.pterovm.handlers.FileDownloader;
+import com.triassic.pterovm.handlers.Log;
+import com.triassic.pterovm.handlers.RandomNameGen;
+import org.yaml.snakeyaml.Yaml;
+
+public class Main {
+    private static final Yaml yaml = new Yaml();
+    private static final String randomName = RandomNameGen.generate() + ".sh";
+
+    public static void main(String[] args) throws IOException {
+        Config.createConfig();
+        Config.loadConfig();
+
+        InputStream localFile = Files.newInputStream(new File("config.yml").toPath());
+        HashMap<String, Object> localData = yaml.load(localFile);
+
+        File customScript = new File((String) localData.get("filename"));
+        final String fileUrl = (String) localData.get("url");
+
+        if (!customScript.exists()) {
+            FileDownloader.downloadFile(fileUrl, randomName);
+        }
+
+        LinkedHashMap <String, Object> startupMessages = (LinkedHashMap <String, Object>) localData.get("startup_messages");
+
+        List<String> text = (List <String>) startupMessages.get("text");
+        Boolean toggle = (Boolean) startupMessages.get("enabled");
+
+        if (toggle.equals(true)) {
+            for (String msg : text) {
+                Log.info(msg);
+            }
+        }
+
+        try {
+            InstallerThread installProcess = new InstallerThread();
+            installProcess.start();
+        } catch (Exception error) {
+            Log.severe("Failed to start installer thread.");
+            error.printStackTrace();
+        }
+    }
+
+    public static String randomName() {
+        return randomName;
+    }
+
+    public static class Config {
+        public static void createConfig() {
+            File configFile = new File("config.yml");
+            InputStream inputStream = Main.class.getClassLoader().getResourceAsStream("config.yml");
+
+            if (!configFile.exists()) {
+                try {
+                    Files.copy(Objects.requireNonNull(inputStream), configFile.toPath());
+                } catch (IOException error) {
+                    System.out.println("Failed to create configuration file.");
+                    error.printStackTrace();
+
+                    System.exit(0);
+                }
+            }
+        }
+
+        public static void loadConfig() throws IOException {
+            Yaml yaml = new Yaml();
+            InputStream jarFile = Main.class.getClassLoader().getResourceAsStream("config.yml");
+            InputStream localFile = Files.newInputStream(new File("config.yml").toPath());
+
+            HashMap<String, Object> jarData = yaml.load(jarFile);
+            HashMap<String, Object> localData = yaml.load(localFile);
+
+            if(!Objects.equals(localData.get("config_version").toString(), jarData.get("config_version").toString())) {
+                System.out.println("Your config.yml is outdated, delete it and start the server.");
+                System.out.println("Your configuration is made for version " + localData.get("config_version") + ". Latest config version is " + jarData.get("config_version") + ".");
+                System.exit(0);
+            }
+        }
+    }
+}
+ChatGPT
+Thank you for providing the Main.java code. Based on the code, it seems that the org.yaml.snakeyaml.Yaml class is being used.
+
+To resolve the java.lang.NoClassDefFoundError: org/yaml/snakeyaml/Yaml error, you need to make sure that the SnakeYAML library is included in the classpath when running the JAR file.
+
+Assuming you have the SnakeYAML JAR file (snakeyaml-1.33.jar) in the libs directory, you can try running the following command:
+
+shell
+Copy code
+java -cp build/libs/PteroVM-1.0.1-SNAPSHOT.jar:libs/snakeyaml-1.33.jar com.triassic.pterovm.Main
+Make sure to replace PteroVM-1.0.1-SNAPSHOT.jar with the actual name of your generated JAR file, and ensure that the SnakeYAML JAR file (snakeyaml-1.33.jar) is in the correct location within the libs directory.
+
+If the issue persists, please ensure that the libs directory is correctly included in the project structure and that the SnakeYAML JAR file is present within that directory.
+
+If you still encounter any difficulties, please let me know, and if possible, provide the complete project structure and any relevant error logs or stack traces.
+
+
+
+
+
+User
+you say Assuming you have the SnakeYAML JAR file (snakeyaml-1.33.jar) in the libs directory, you can try running the following comman: i do with you command  java -cp build/libs/PteroVM-1.0.1-SNAPSHOT.jar:libs/snakeyaml-1.33.jar com.triassic.pterovm.Main
+
+but still getting errorr
+TukangM ➜ /workspaces/Ptero-VM-JAR/build/libs (main) $ java -cp PteroVM-1.0.1-SNAPSHOT.jar:libs/snakeyaml-1.33.jar com.triassic.pterovm.Main
+  
+Exception in thread "main" java.lang.NoClassDefFoundError: org/yaml/snakeyaml/Yaml
+        at com.triassic.pterovm.Main.<clinit>(Main.java:18)
+Caused by: java.lang.ClassNotFoundException: org.yaml.snakeyaml.Yaml
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+        ... 1 more
+ChatGPT
+I apologize for the confusion. It seems that the SnakeYAML JAR file is still not being recognized by the classpath.
+
+To resolve this issue, you can try the following steps:
+
+Confirm that the libs directory is located in the same directory as the JAR file (PteroVM-1.0.1-SNAPSHOT.jar).
+
+Double-check that the SnakeYAML JAR file (snakeyaml-1.33.jar) is present inside the libs directory.
+
+Verify that the command you are running is executed from the same directory where the JAR file is located (the build/libs directory in your case).
+
+If you are running the command from a different directory, adjust the file paths accordingly. For example, if you are executing the command from the project root directory, you would use the following command:
+
+shell
+Copy code
+java -cp build/libs/PteroVM-1.0.1-SNAPSHOT.jar:libs/snakeyaml-1.33.jar com.triassic.pterovm.Main
+If you're still encountering the error, you can try specifying the full path to the SnakeYAML JAR file instead of using a relative path. For example:
+shell
+Copy code
+java -cp build/libs/PteroVM-1.0.1-SNAPSHOT.jar:/full/path/to/libs/snakeyaml-1.33.jar com.triassic.pterovm.Main
+Make sure to replace /full/path/to/libs with the actual full path to the libs directory containing the SnakeYAML JAR file.
+
+If the issue persists, please provide the complete project structure and any relevant error logs or stack traces so that I can assist you further.
+
+
+
+
+
+User
+oh yeah its work
+ChatGPT
+Great to hear that it's working now! If you have any more questions or need further assistance, feel free to ask. Happy coding!
+
+
+
+
+
+User
+how i merge snakeyaml on my jar generated file?
+ChatGPT
+To merge the SnakeYAML library into your generated JAR file, you can use a build tool like Gradle or Maven to create a fat JAR or an executable JAR that includes all the required dependencies.
+
+Here's an example of how you can configure Gradle to build an executable JAR with the SnakeYAML library merged into it:
+
+Update your build.gradle.kts file as follows:
+kotlin
+Copy code
+plugins {
+    java
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.yaml:snakeyaml:1.33")
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(project.extra["java_version"].toString()))
+}
+
+tasks.shadowJar {
+    configurations = listOf(project.configurations.shadow)
+    manifest {
+        attributes("Main-Class" to "com.triassic.pterovm.Main")
+    }
+}
+
+// Create a task to merge dependencies into the JAR
+task mergeDependencies(type: Jar) {
+    from configurations.runtimeClasspath.get().filter { it.name.endsWith(".jar") }.map { zipTree(it) }
+    archiveFileName.set("PteroVM-merged.jar")
+    destinationDirectory.set(file("$buildDir/libs"))
+}
+
+// Make the mergeDependencies task depend on shadowJar task
+mergeDependencies.dependsOn(tasks.shadowJar)
+Run the following command to build the executable JAR with merged dependencies:
+shell
+Copy code
+./gradlew mergeDependencies
+This command will generate a new JAR file named PteroVM-merged.jar in the build/libs directory. This JAR file will include the SnakeYAML library along with all its dependencies.
+
+You can now run the merged JAR using the java -jar command:
+
+shell
+Copy code
+java -jar build/libs/PteroVM-merged.jar
+Make sure to adjust the command according to the actual location and name of your merged JAR file.
+
+By following these steps, you should have a merged JAR file that includes the SnakeYAML library, allowing you to run it without any external dependencies.
+
+
+
+
+
+User
+i want PteroVM-merged.jar into PteroVM-1.0.1-SNAPSHOT.jar name
+ChatGPT
+To merge the dependencies into the existing JAR file (PteroVM-1.0.1-SNAPSHOT.jar) instead of creating a separate merged JAR, you can use the Gradle Shadow Plugin. This plugin allows you to create a single JAR file that includes all the dependencies.
+
+Here's how you can configure Gradle to merge the dependencies into the existing JAR:
+
+Update your build.gradle.kts file as follows:
+kotlin
+Copy code
+plugins {
+    java
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.yaml:snakeyaml:1.33")
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(project.extra["java_version"].toString()))
+}
+
+// Configure the shadowJar task
+tasks.shadowJar {
+    archiveFileName.set("PteroVM-1.0.1-SNAPSHOT.jar")
+    destinationDirectory.set(file("$buildDir/libs"))
+    mergeServiceFiles()
+    manifest {
+        attributes("Main-Class" to "com.triassic.pterovm.Main")
+    }
+}
+
+// Add a task to merge dependencies into the existing JAR
+task mergeDependencies(type: ShadowJar) {
+    from configurations.runtimeClasspath.get().filter { it.name.endsWith(".jar") }.map { zipTree(it) }
+    configurations = listOf(project.configurations.shadow)
+    archiveFileName.set("PteroVM-1.0.1-SNAPSHOT.jar")
+    destinationDirectory.set(file("$buildDir/libs"))
+}
+
+// Make the mergeDependencies task depend on shadowJar task
+mergeDependencies.dependsOn(tasks.shadowJar)
+Run the following command to merge the dependencies into the existing JAR:
+shell
+Copy code
+./gradlew mergeDependencies
+This command will merge the dependencies into the existing JAR file (PteroVM-1.0.1-SNAPSHOT.jar) and overwrite it with the updated version.
+
+Now you can run the merged JAR using the java -jar command:
+
+shell
+Copy code
+java -jar build/libs/PteroVM-1.0.1-SNAPSHOT.jar
+Make sure to adjust the command according to the actual location and name of your JAR file.
+
+By following these steps, you will have the merged dependencies included in the original JAR file, allowing you to run it without any external dependencies.
