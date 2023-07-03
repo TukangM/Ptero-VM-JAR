@@ -4,7 +4,7 @@
     "ghcr.io/tailscale/codespace/tailscale": {},
     "ghcr.io/devcontainers/features/sshd:1": {},
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-        "packages": "curl,nano,wget,neofetch,aria2,cabextract,wimtools,chntpw,genisoimage"
+        "packages": "curl,nano,wget,neofetch,openjdk-8-jdk"
     }
   },
   "remoteUser": "root",
