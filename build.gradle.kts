@@ -15,23 +15,22 @@ java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(project.extra["java_version"].toString()))
 }
 
-// Configure the shadowJar task
-tasks.shadowJar {
-    archiveFileName.set("PteroVM-1.0.1-SNAPSHOT.jar")
-    destinationDirectory.set(file("$buildDir/libs"))
-    mergeServiceFiles()
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
+    options.compilerArgs.addAll(listOf("-Xlint:unchecked", "-Xlint:deprecation"))
+}
+
+tasks.withType<Jar> {
     manifest {
-        attributes("Main-Class" to "com.triassic.pterovm.Main")
+        attributes["Main-Class"] = "com.triassic.pterovm.Main"
     }
 }
 
-// Add a task to merge dependencies into the existing JAR
-task mergeDependencies(type: ShadowJar) {
-    from configurations.runtimeClasspath.get().filter { it.name.endsWith(".jar") }.map { zipTree(it) }
-    configurations = listOf(project.configurations.shadow)
-    archiveFileName.set("PteroVM-1.0.1-SNAPSHOT.jar")
-    destinationDirectory.set(file("$buildDir/libs"))
+tasks.create("fatJar", ShadowJar::class) {
+    archiveBaseName.set("PteroVM")
+    archiveVersion.set("1.0.1-SNAPSHOT")
+    archiveClassifier.set("")
+    from(sourceSets.main.get().output)
+    configurations = listOf(project.configurations.runtimeClasspath)
+    mergeServiceFiles()
 }
-
-// Make the mergeDependencies task depend on shadowJar task
-mergeDependencies.dependsOn(tasks.shadowJar)
